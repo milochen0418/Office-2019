@@ -111,17 +111,6 @@ const init = async () => {
     }
   }
 	
-  const getBalanceBtn = document.getElementById('getBalance');
-	getBalanceBtn.onclick = async () => {
-		console.log('click getBalanceBtn');
-		//web3js.eth.getBalance(getAccount(), (err, balance) => {
-		httpHandler.eth.getBalance(myAccount, (err, balance) => {
-			//const balanceInEth = web3js.fromWei(balance, 'ether');
-			const balanceInEth = httpHandler.fromWei(balance, 'ether');
-			console.log(`balance ${balanceInEth} ether`);
-		});	
-	}
-
   // Get all past "UpdateNumber" events
   const getPastButton = document.getElementById('getPast');
   getPastButton.onclick = async () => {
@@ -156,43 +145,6 @@ const init = async () => {
     }
   }
 
-  const sendTransactionButton = document.getElementById('sendTransaction');
-  sendTransactionButton.onclick = async () => {
-
-    const web3 = httpHandler;
-
-    var privateKey = '';
-    var gasPrice = 2;//or get with web3.eth.gasPrice
-    var gasLimit = 3000000;
-    var rawTransaction = {
-      "from": addr,
-      "nonce": web3.toHex(nonce),
-      "gasPrice": web3.toHex(gasPrice * 1e9),
-      "gasLimit": web3.toHex(gasLimit),
-      "to": toAddress,
-      "value": amountToSend ,
-      "chainId": 4 //remember to change this
-    };
-
-    var privKey = new Buffer(privateKey, 'hex');
-    var tx = new Tx(rawTransaction);
-
-    tx.sign(privKey);
-    var serializedTx = tx.serialize();
-
-    web3.eth.sendRawTransaction('0x' + serializedTx.toString('hex'), function(err, hash) {
-      if (!err)
-          {
-            console.log('Txn Sent and hash is '+hash);
-          }
-      else
-          {
-            console.error(err);
-          }
-    });    
-
-
-  }
 
 };
 
