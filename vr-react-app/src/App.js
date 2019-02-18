@@ -20,7 +20,7 @@ export default class App extends React.Component {
             textAlignVertical: 'center',
             transform: [{translate: [-6, 2, -6]}],
           }}>
-          Milo wish you lots of luck for the Pig year!
+          VR Beauty
         </Text>
         <Penholder />
       </View>
