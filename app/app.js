@@ -86,30 +86,48 @@ const init = async () => {
     }
     console.log('[Event] UpdateNumber', data.returnValues.value);
     valueDisplayElement.textContent = data.returnValues.value;
+	 updatePicture(data.returnValues.value);
     
   });
 
-  // Call "update" function in the contract when we click on the update button
-  const updateButton = document.getElementById('update');
-  updateButton.onclick = async () => {
-	  console.log("wait myAccount");
-    myAccount = (await httpHandler.eth.getAccounts())[0];
-	  console.log("get myAccount and it is ");
-	  console.log(myAccount);
-    if (contractWriter && myAccount) {
-	    console.log("in the code block of if (contractWriter & myAccount) ... await contractWriter.methods.update().send");
 
-      //await contractWriter.methods.update().send({
+	function updatePicture( val) {
+		console.log('updatePicture with val = ' + val);
+    
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      console.log("xhttp.onreadystatechane is called");
+      if (this.readyState == 4 && this.status == 200) {
+          console.log('readState = 4 and status = 200');
+          //document.getElementById("demo").innerHTML =
+          //this.responseText;
+          
+        }
+      };
+    xhttp.open("GET", "http://dexon.pieapple.com:8765/change/"+val, true);
+    xhttp.send();		
+  }
+  
+  // Call "update" function in the contract when we click on the update button
+	const updateButton = document.getElementById('update');
+	updateButton.onclick = async () => {
+		console.log("wait myAccount");
+		myAccount = (await httpHandler.eth.getAccounts())[0];
+		console.log("get myAccount and it is ");
+		console.log(myAccount);
+		if (contractWriter && myAccount) {
+			console.log("in the code block of if (contractWriter & myAccount) ... await contractWriter.methods.update().send");
+
+			//await contractWriter.methods.update().send({
 			var writer= contractWriter.methods.update();
 			console.log(writer);
-      await writer.send({
-        from: myAccount,
-      });
+			await writer.send({
+				from: myAccount,
+			});
 			console.log(writer);
-
-	    console.log("finish await");
-    }
-  }
+			console.log("finish await");
+		}
+	}
 	
   // Get all past "UpdateNumber" events
   const getPastButton = document.getElementById('getPast');
