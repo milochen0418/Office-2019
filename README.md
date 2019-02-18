@@ -12,4 +12,3 @@ The branch dApp-jQueryOnly is the jQuery version for this game.
 ## dApp-ReactVR  
 Then branch is master branch that we want to go.
 We want to extend the game of dApp-jQueryOnly branch into ReactVR version
-
