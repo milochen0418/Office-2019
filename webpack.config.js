@@ -8,7 +8,9 @@ const OUTPUT_FOLDER = './dist';
 
 module.exports = () => {
   const plugins = [
-//    new CleanWebpackPlugin([`${OUTPUT_FOLDER}/*`], {  watch: false }),
+  	new webpack.ProvidePlugin({
+    		$: 'jquery'
+    	}),	    
     new CleanWebpackPlugin([`${OUTPUT_FOLDER}/*`], {  watch: true }),
     new HtmlWebpackPlugin({
       template: './app/index.html',
@@ -25,6 +27,12 @@ module.exports = () => {
     },
     plugins,
     module: {
+      rules: [
+        {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader']
+        }
+      ],
 
     },
   };
