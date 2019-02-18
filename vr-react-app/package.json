@@ -1,16 +1,13 @@
 {
-  "name": "react-vr-hello",
-  "version": "1.0.0",
-  "description": "react-vr helloworld project",
-  "main": "index.js",
+  "name": "office",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node -e \"console.log('open browser at http://localhost:8081/vr/\\n\\n');\" && node node_modules/react-native/local-cli/cli.js start",
     "bundle": "node node_modules/react-vr/scripts/bundle.js",
     "open": "node -e \"require('xopen')('http://localhost:8081/vr/')\"",
     "devtools": "react-devtools",
-    "test": "jest",
-    "help": "cat ./package.json | jq '.scripts'"
+    "test": "jest"
   },
   "dependencies": {
     "ovrui": "~1.4.0",
@@ -30,22 +27,5 @@
   },
   "jest": {
     "preset": "react-vr"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/milochen0418/react-vr-hello.git"
-  },
-  "keywords": [
-    "react",
-    "vr",
-    "project",
-    "hello",
-    "world"
-  ],
-  "author": "Milo Chen",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/milochen0418/react-vr-hello/issues"
-  },
-  "homepage": "https://github.com/milochen0418/react-vr-hello#readme"
+  }
 }

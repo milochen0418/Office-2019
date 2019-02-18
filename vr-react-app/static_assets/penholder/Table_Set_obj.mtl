@@ -1,0 +1,115 @@
+# 
+# Wavefront material file
+# Converted by the DEEP Exploration  Deep Exploration 4.0.10.871 Release
+# Right Hemisphere, LTD
+# http://www.righthemisphere.com/
+# 
+
+newmtl Stay_paper
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 64
+
+newmtl Stay_Paper_Side
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 64
+map_Kd Stay_Paper_Side.jpg
+
+newmtl Stay_Pencil_red
+Ka 0.843137 0.0509804 0.0509804
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 64
+map_Kd Stay_Pencil_red.jpg
+
+newmtl Stay_pencil_wood
+Ka 0.976471 0.898039 0.662745
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 64
+map_Kd stay_pencil_wood.jpg
+
+newmtl stay_Pencil_shank_red
+Ka 1 0.207843 0.0509804
+Kd 1 0.207843 0.0509804
+Ks 0.9 0.9 0.9
+illum 2
+Ns 64
+
+newmtl Stay_Pencil_blue
+Ka 0 0.509804 0.988235
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 64
+map_Kd Stay_Pencil_blue.jpg
+
+newmtl Stay_Pencil_shank_blue
+Ka 0 0.592157 0.933333
+Kd 0 0.592157 0.933333
+Ks 0.9 0.9 0.9
+illum 2
+Ns 64
+
+newmtl Stay_visit
+Ka 0.5 0.5 0.5
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 64
+map_Kd Stay_visit.jpg
+
+newmtl Stay_plastic
+Ka 0.117647 0.117647 0.117647
+Kd 0.117647 0.117647 0.117647
+Ks 0.9 0.9 0.9
+illum 2
+Ns 64
+
+newmtl Stay_grid
+Ka 0 0 0
+Kd 0 0 0
+Ks 0.9 0.9 0.9
+illum 2
+Ns 64
+map_bump Stay_grid.jpg
+bump Stay_grid.jpg
+map_opacity Stay_grid.jpg
+map_d Stay_grid.jpg
+
+newmtl stay_black_marker
+Ka 0.117647 0.133333 0.137255
+Kd 0.117647 0.133333 0.137255
+Ks 0.9 0.9 0.9
+illum 2
+Ns 64
+
+newmtl stay_black_marker_text
+Ka 0.5 0.5 0.5
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 64
+map_Kd Stay_MarkerPermanent_black.jpg
+
+newmtl stay_green_marker
+Ka 0.345098 0.705882 0.317647
+Kd 0.345098 0.705882 0.317647
+Ks 0.9 0.9 0.9
+illum 2
+Ns 64
+
+newmtl stay_green_marker_text
+Ka 0.5 0.5 0.5
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 64
+map_Kd Stay_MarkerPermanent_green.jpg
