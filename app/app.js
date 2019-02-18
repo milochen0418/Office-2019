@@ -101,6 +101,8 @@ const init = async () => {
           console.log('readState = 4 and status = 200');
           //document.getElementById("demo").innerHTML =
           //this.responseText;
+          var image = document.getElementById("random-picture");
+          image.src="http://dexon.pieapple.com:8765/images/index.jpg?" + new Date().getTime();
           
         }
       };
