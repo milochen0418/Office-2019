@@ -1,3 +1,6 @@
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 console.log('WELCOME TO OFFICE 2019');
 
 const updateHTML = (data) => {
