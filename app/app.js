@@ -1,6 +1,9 @@
 
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {$,jQuery} from 'jquery';
+window.$ = $;
+window.jQuery = jQuery;
 
 console.log('WELCOME TO OFFICE 2019');
 
@@ -107,7 +110,7 @@ const init = async () => {
           //this.responseText;
           var image = document.getElementById("random-picture");
           image.src="http://dexon.pieapple.com:8765/images/index.jpg?" + new Date().getTime();
-          
+          document.getElementById('dice').style.visibility = 'hidden';
         }
       };
     xhttp.open("GET", "http://dexon.pieapple.com:8765/change/"+val, true);
@@ -117,6 +120,9 @@ const init = async () => {
   // Call "update" function in the contract when we click on the update button
 	const updateButton = document.getElementById('update');
 	updateButton.onclick = async () => {
+    //jQuery('#dice').show();
+    document.getElementById('dice').style.visibility = 'visible';
+        
 		console.log("wait myAccount");
 		myAccount = (await httpHandler.eth.getAccounts())[0];
 		console.log("get myAccount and it is ");
@@ -138,6 +144,7 @@ const init = async () => {
   // Get all past "UpdateNumber" events
   const getPastButton = document.getElementById('getPast');
   getPastButton.onclick = async () => {
+
     const events = await contractReader.getPastEvents(
       'UpdateNumber', 
       {

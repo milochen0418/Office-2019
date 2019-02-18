@@ -10,16 +10,27 @@
     </style>
 </head>
 <body>
-  <div id="content" style="padding: 20px;">
-    <h1>Office 2019 - <h3>The Office with VR and dApp </h3></h1>
-    <button id="update"  class="btn btn-primary" >我要換美女圖</button>
-    <button id="getPast" class="btn btn-info">目前有誰換過圖?</button>
-    <button id="getPastByAccount" class="btn btn-success">查詢那傢伙換過多少圖 By User Account</button>
+  <div class='row'>
+    <div id="content" style="padding: 20px;" class="col-sm-9">
+      <div class="row">
+        <h2> ---- Office 2019 dApp + VR</h2>
+      </div>
+      <div class="row">
+        
+        <button id="update"  class="align-bottom btn btn-primary col-sm-4" >我要換美女圖</button>
+        <button id="getPast" class="align-bottom btn btn-info col-sm-4">目前有誰換過圖?</button>
+        <button id="getPastByAccount" class="align-bottom btn btn-success col-sm-4">查詢那傢伙換過多少圖</button>
+      </div>
+    </div>
+    <div class="col-sm-3">
 
+      <img id='dice' src='http://dexon.pieapple.com:8765/images/dice.gif' style="max-height:300px;visibility:hidden">
+      </img>
+    </div>
   </div>
 
   <div style="text-align:center">
-    <h1>Value:</h1>
+    <h1>更換次數</h1>
     <h1 id="value"></h1>
   </div>
   
@@ -29,7 +40,7 @@
   <hr>
  
   <div style="text-align:center">
-    <h1>Past event</h1>
+    <h1>換圖歷史</h1>
     <div id="past"></div>
   </div>
 </body>
