@@ -12,13 +12,7 @@ export default class App extends React.Component {
 
         <Image 
         crossOrigin="anonymous"
-	source={{uri: './images/index.jpg'}}
-
-	style={{
-        flex: 1,
-        resizeMode: 'contain',
-        backgroundColor: 'yellow'
-        }}
+        source={{uri: './images/puppy.jpg'}} 
         />        
 
 
