@@ -15,7 +15,7 @@
     "exec": "cd ./dist && ../node_modules/.bin/http-server && cd -",
     "reboot": "npm run clean && npm install && npm run compile && npm run migrate:testnet && npm run build:webapp && npm run exec",
     "reboot-mytestnet": "npm run clean && npm install && npm run compile && npm run migrate:mytestnet && npm run build:webapp && npm run exec",
-    "reboot-webonly": "npm run build:webapp && npm run exec",
+    "reboot-webonly": "rm -rf ./dist && npm run build:webapp && npm run exec",
     "help": "cat ./package.json | jq '.scripts'"
   },
   "author": "",
