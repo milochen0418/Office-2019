@@ -11,14 +11,8 @@ export default class App extends React.Component {
         <Pano source={asset('background.jpeg')} />
 
         <Image 
-        crossOrigin="anonymous"
 	source={{uri: './images/index.jpg'}}
 
-	style={{
-        flex: 1,
-        resizeMode: 'contain',
-        backgroundColor: 'yellow'
-        }}
         />        
 
 
