@@ -6,6 +6,9 @@ Office 2019 support VR and dApp. It's focus on new life for the worker in the of
 Keep going to change and don't stop. 
 
 # VR 
-$ cd vr-react-app  
-$ npm install  
-$ npm start   
+$ sudo npm install -g yarn
+$ cd react-vr-image
+$ yarn install 
+$ npm start
+
+
