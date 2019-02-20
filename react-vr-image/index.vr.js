@@ -18,7 +18,8 @@ class Button extends React.Component {
         onClick={() => {
           this.setState({open: !this.state.open});
 	  let url = 'http://ubuntu1804.twdapp.org:8081/vr/';
-	  Linking.openURL(url);
+	  Linking.openURL(url, "_blank");
+	  //window.open(url, "_blank");
         }}
       >
         <Image
